@@ -1,6 +1,6 @@
 :root{
     --fs-xl: clamp(0.9em, 7vw, 2.5rem);
-    --fs-normal: clamp(0.5em, 3.25vh, 2.5rem);
+    --fs-normal: clamp(0.1em, 3.25vh, 2.5rem);
 
     --map-size: clamp(90px, 20vw, 225px);
     --button-width: clamp(5em, 20vw, 10rem);
@@ -8,14 +8,18 @@
     --cats-size: clamp(125px, 20vw, 350px);
 
     --listdata-width: clamp(40%, 50%, 100%);
+    --textbox-width: 60vw;
 }
 
 @media (max-width: 500px){
     :root{
         --map-size: 25vw;
         --listdata-width: 50vw;
+        --fs-normal: clamp(0.1em, 2.25vh, 2.5rem);
+        --textbox-width: 70vw;
     }
 }
+
 
 @media (min-width: 500px){
     :root{
@@ -38,7 +42,7 @@ body{
 .middleTextBox {
     margin: auto;
     text-align: center;
-    width: 60vw;
+    width: var(--textbox-width);
     border: 0.75vw dotted #F22727;
     padding-left: 5vw;
     padding-right: 5vw;
